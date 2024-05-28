@@ -10,10 +10,15 @@ Our proposed model not only identifies and classifies potential threats but also
 
 # Preprocessing and Transformation
 Given the high number of continuous features available, selecting the correct set of features for our modeling is of utmost importance.  For feature selection, several strategies were employed: 
+
 **Dropping timestamp-related columns:** As no significant trend was observed, timestamp-related columns were excluded. 
+
 **Scaling numerical features and analyzing outliers:** All numerical features were scaled, and outliers were analyzed to identify patterns.
+
 **Dropping non-impactful columns:** Columns like source and destination IP addresses and port numbers were dropped as they did not significantly impact the modeling. 
+
 **Removing UDP protocol data:** Due to minimal counts, UDP protocol data was removed, followed by dropping the protocol-related feature. 
+
 **Analyzing correlation among features:** A correlation matrix was used to analyze and drop highly correlated features to reduce redundancy. 
-The Shapiro-Wilk test was employed to validate whether each feature follows a normal distribution. Approximately 45% of the features exhibited a normal distribution. Initial modeling will commence with this set of features, with additional features potentially included later to improve accuracy. Scaling may be necessary to normalize the data for these additional columns. 
-These steps ensure that the selected features are most relevant for detecting anomalies in IoT network traffic, thereby enhancing the model’s accuracy and performance.This detailed analysis and feature selection process provide a solid foundation for building robust machine learning models for anomaly detection in IoT environments. 
+
+The Shapiro-Wilk test was employed to validate whether each feature follows a normal distribution. Approximately 45% of the features exhibited a normal distribution. Initial modeling will commence with this set of features, with additional features potentially included later to improve accuracy. Scaling may be necessary to normalize the data for these additional columns. These steps ensure that the selected features are most relevant for detecting anomalies in IoT network traffic, thereby enhancing the model’s accuracy and performance.This detailed analysis and feature selection process provide a solid foundation for building robust machine learning models for anomaly detection in IoT environments. 
